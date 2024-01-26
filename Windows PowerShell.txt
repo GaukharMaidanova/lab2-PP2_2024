@@ -1,0 +1,277 @@
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Установите последнюю версию PowerShell для новых функций и улучшения! https://aka.ms/PSWindows
+
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> touch helloworld.html
+Touch Version 5.0 Copyright (c) 1995-2010 Embarcadero Technologies, Inc.
+
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git init
+Initialized empty Git repository in C:/Users/Gauhar/Downloads/githowto/githowto/repositories/work/.git/
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git add helloworld.html
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git commit -m "Initial Commit"
+[main (root-commit) 0f2ab03] Initial Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 helloworld.html
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.html
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   helloworld.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git add helloworld.html
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   helloworld.html
+
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git commit
+[main 106d49f] Added h1 tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git config user.name
+Gaukhar
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git config --replace-all user.name "GaukharMaidanova"
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git config user.name
+GaukharMaidanova
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git add helloworld.html
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   helloworld.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   helloworld.html
+
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git commit -m "Added standard HTML page tags"
+[main 4305457] Added standard HTML page tags
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   helloworld.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git add .
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   helloworld.html
+
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git commit -m "Added HTML header"
+[main 90a792c] Added HTML header
+ 1 file changed, 2 insertions(+)
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log
+commit 90a792cb81f34174026eb92ec261c243e23f7f6e (HEAD -> main)
+Author: GaukharMaidanova <g_maidanova@kbtu.kz>
+Date:   Tue Jan 23 22:05:24 2024 +0600
+
+    Added HTML header
+
+commit 43054576d90191aaa3ec5649760e382944afd6a4
+Author: GaukharMaidanova <g_maidanova@kbtu.kz>
+Date:   Tue Jan 23 22:03:27 2024 +0600
+
+    Added standard HTML page tags
+
+commit 106d49f6d316e87513647fabe211a1bf3721c158
+Author: Gaukhar <g_maidanova@kbtu.kz>
+Date:   Tue Jan 23 21:14:16 2024 +0600
+
+    Added h1 tag
+
+commit 0f2ab036474fef424734d5c5e3418e0b7b30cc50
+Author: Gaukhar <g_maidanova@kbtu.kz>
+Date:   Tue Jan 23 21:08:34 2024 +0600
+
+    Initial Commit
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log --pretty=oneline
+90a792cb81f34174026eb92ec261c243e23f7f6e (HEAD -> main) Added HTML header
+43054576d90191aaa3ec5649760e382944afd6a4 Added standard HTML page tags
+106d49f6d316e87513647fabe211a1bf3721c158 Added h1 tag
+0f2ab036474fef424734d5c5e3418e0b7b30cc50 Initial Commit
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log --oneline --max-count=2
+90a792c (HEAD -> main) Added HTML header
+4305457 Added standard HTML page tags
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log --oneline --since="5minutes ago"
+90a792c (HEAD -> main) Added HTML header
+4305457 Added standard HTML page tags
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log --oneline --until="5minutes ago"
+4305457 Added standard HTML page tags
+106d49f Added h1 tag
+0f2ab03 Initial Commit
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log --oneline --author="Your Name"
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log --oneline --all
+90a792c (HEAD -> main) Added HTML header
+4305457 Added standard HTML page tags
+106d49f Added h1 tag
+0f2ab03 Initial Commit
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log --all --pretty=format:"%h %cd %s (%an)" --since="7 days ago"
+90a792c Tue Jan 23 22:05:24 2024 +0600 Added HTML header (GaukharMaidanova)
+4305457 Tue Jan 23 22:03:27 2024 +0600 Added standard HTML page tags (GaukharMaidanova)
+106d49f Tue Jan 23 21:14:16 2024 +0600 Added h1 tag (Gaukhar)
+0f2ab03 Tue Jan 23 21:08:34 2024 +0600 Initial Commit (Gaukhar)
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+90a792c 2024-01-23 | Added HTML header (HEAD -> main) [GaukharMaidanova]
+4305457 2024-01-23 | Added standard HTML page tags [GaukharMaidanova]
+106d49f 2024-01-23 | Added h1 tag [Gaukhar]
+0f2ab03 2024-01-23 | Initial Commit [Gaukhar]
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git config --global format.pretty '%h %ad | %s%d [%an]'
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git config --global log.dateshort
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log
+90a792c 2024-01-23 | Added HTML header (HEAD -> main) [GaukharMaidanova]
+4305457 2024-01-23 | Added standard HTML page tags [GaukharMaidanova]
+106d49f 2024-01-23 | Added h1 tag [Gaukhar]
+0f2ab03 2024-01-23 | Initial Commit [Gaukhar]
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git checkout <hash>
+строка:1 знак:14
++ git checkout <hash>
++              ~
+Оператор "<" зарезервирован для использования в будущем.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git checkout 0f2ab03
+Note: switching to '0f2ab03'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 0f2ab03 Initial Commit
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> cat helloworld.html
+Hello, World!
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git switch main
+Previous HEAD position was 0f2ab03 Initial Commit
+Switched to branch 'main'
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> cat helloworld.html
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git tag v1
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log
+90a792c 2024-01-23 | Added HTML header (HEAD -> main, tag: v1) [GaukharMaidanova]
+4305457 2024-01-23 | Added standard HTML page tags [GaukharMaidanova]
+106d49f 2024-01-23 | Added h1 tag [Gaukhar]
+0f2ab03 2024-01-23 | Initial Commit [Gaukhar]
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git checkout v1^
+Note: switching to 'v1^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 4305457 Added standard HTML page tags
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> cat helloworld.html
+<html>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git tag v1-beta
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log
+4305457 2024-01-23 | Added standard HTML page tags (HEAD, tag: v1-beta) [GaukharMaidanova]
+106d49f 2024-01-23 | Added h1 tag [Gaukhar]
+0f2ab03 2024-01-23 | Initial Commit [Gaukhar]
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git checkout v1
+Previous HEAD position was 4305457 Added standard HTML page tags
+HEAD is now at 90a792c Added HTML header
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git checkout v1-beta
+Previous HEAD position was 90a792c Added HTML header
+HEAD is now at 4305457 Added standard HTML page tags
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git tag
+v1
+v1-beta
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git log main --all
+90a792c 2024-01-23 | Added HTML header (tag: v1, main) [GaukharMaidanova]
+4305457 2024-01-23 | Added standard HTML page tags (HEAD, tag: v1-beta) [GaukharMaidanova]
+106d49f 2024-01-23 | Added h1 tag [Gaukhar]
+0f2ab03 2024-01-23 | Initial Commit [Gaukhar]
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git switch main
+Previous HEAD position was 4305457 Added standard HTML page tags
+Switched to branch 'main'
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   helloworld.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git checkout helloworld.html
+Updated 1 path from the index
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> cat helloworld.html
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git add helloworld.html
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   helloworld.html
+
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git reset HEAD helloworld.html
+Unstaged changes after reset:
+M       helloworld.html
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git checkout helloworld.html
+Updated 1 path from the index
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Gauhar\Downloads\githowto\githowto\repositories\work>
